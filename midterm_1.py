@@ -15,13 +15,21 @@ class Person:
         return f"tax wage is {tax}"
 
     def retirementmortgage(self):
-        if self.gender == "male":
-            ret_money = (65 - self.age) * 12 * (self.income * 0.01)
+        if self.gender == "male" and self.age < 30:
+            ret_money = (65 - 30) * 12 * (self.income * 0.01)
             return f"retirement mortgage amounts to {ret_money}"
 
-        if self.gender == "female":
+        elif self.gender == 'male' and self.age >= 30:
+            ret_money = (65 - self.age) * 12 * (self.income * 0.01)
+            return f"retirement mortgage amounts to {ret_money}"
+        elif self.gender == "female" and self.age < 30:
+            ret_money = (60 - 30) * 12 * (self.income * 0.01)
+            return f"retirement mortgage amounts to {ret_money}"
+
+        elif self.gender == 'female' and self.age >= 30:
             ret_money = (60 - self.age) * 12 * (self.income * 0.01)
             return f"retirement mortgage amounts to {ret_money}"
+
 
     def retirement_age(self):
         if self.gender == "male":
