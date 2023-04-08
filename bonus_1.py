@@ -64,3 +64,5 @@ class Vector:
 p_a = Vector(2, 7)
 p_b = Vector(3, 5)
 print((p_a + p_b), (p_a * 2), (3 * p_b))
+
+# couldn't do 2 and 3 and something is wrong with 4, but I don't know what.
